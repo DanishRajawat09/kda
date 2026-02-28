@@ -36,10 +36,10 @@ export function HeroSection() {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-           <a href="#courses">
+           <a href="#courses" className='w-full'>
                <Button
                 variant="outline"
-                className="border-2 border-sky-700 text-sky-700 hover:bg-green-50 px-8 py-6 rounded-lg font-semibold text-lg"
+                className="border-2 border-sky-700 text-sky-700 hover:bg-green-50 px-8 py-6 rounded-lg font-semibold text-lg w-full"
               >
                 View All Programs
               </Button>

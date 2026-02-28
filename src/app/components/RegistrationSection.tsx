@@ -40,10 +40,10 @@ export function RegistrationSection() {
               <Button className="bg-sky-700 hover:bg-sky-800 text-white px-8 py-6 rounded-lg font-semibold text-lg shadow-lg">
                 Student Registration
               </Button>
-             <a href="#courses">
+             <a href="#courses" className='w-full'>
                <Button
                 variant="outline"
-                className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-6 rounded-lg font-semibold text-lg"
+                className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-6 rounded-lg font-semibold text-lg w-full"
               >
                 View Training Programs
               </Button>
