@@ -6,42 +6,42 @@ export function Courses() {
     {
       id: 1,
       name: "NDA Preparation Program",
-      image: "/public/image1.jpeg",
+      image: "/image1.jpeg",
       description:
         "If you are dreaming of joining the Armed Forces after 12th, our NDA program gives you the right direction. We help students prepare for the written exam while also focusing on daily physical training and SSB interview practice. Our goal is to build discipline, confidence, and leadership qualities in every student.",
     },
     {
       id: 2,
       name: "Army Preparation Program",
-      image: "/public/image2.jpeg",
+      image: "/image2.jpeg",
       description:
         "Our Army coaching program is designed for students who want to serve the nation with pride. Along with exam preparation, we conduct regular physical practice sessions and personality development training so that students are ready for every stage of the selection process.",
     },
     {
       id: 3,
       name: "Air Force Entry Coaching",
-      image: "/public/image3.jpeg",
+      image: "/image3.jpeg",
       description:
         "For students aiming to join the Air Force, we provide complete academic support and physical guidance. We focus on improving reasoning skills, general awareness, and overall confidence so students can perform well in exams and interviews.",
     },
     {
       id: 4,
       name: "Navy Preparation Course",
-      image: "/public/image4.jpeg",
+      image: "/image4.jpeg",
       description:
         "Our Navy preparation course helps students understand both the academic and physical requirements of naval entry. Through regular practice, group activities, and guided training, we prepare students to face the challenges with confidence.",
     },
     {
       id: 5,
       name: "SSC & Police Coaching",
-      image: "/public/image5.jpeg",
+      image: "/image5.jpeg",
       description:
         "We offer focused preparation for SSC and Police recruitment exams. Students receive clear subject guidance, regular practice tests, and physical training support where required to meet exam standards.",
     },
     {
       id: 6,
       name: "CUET Preparation",
-      image: "/public/image6.jpeg",
+      image: "/image6.jpeg",
       description:
         "Our CUET program helps students prepare in a focused and organized way. With subject-wise guidance and regular assessments, we help students improve their performance step by step.",
     },

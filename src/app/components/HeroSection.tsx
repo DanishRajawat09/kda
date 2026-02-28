@@ -54,7 +54,7 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/public/heroImage.jpeg"
+                src="/heroImage.jpeg"
                 alt="Defence Training"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
