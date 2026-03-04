@@ -20,7 +20,7 @@ const slides = [
 export function HeroSection() {
 
   return (
-<section id="home" className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[85vh]">
+<section id="home" className="relative w-full h-[45vh] sm:h-[70vh] lg:h-[85vh]">
 
   {/* Navigation Buttons */}
   <button className="swiper-button-prev-custom hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-10
