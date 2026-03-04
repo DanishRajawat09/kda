@@ -47,7 +47,7 @@ export function HeroSection() {
         <img
           src={img}
           alt="Defence Training"
-          className="w-full h-full "
+          className="w-full h-full  lg:object-fill object-contain"
         />
       </SwiperSlide>
     ))}
