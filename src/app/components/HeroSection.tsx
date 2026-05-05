@@ -22,7 +22,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-[45vh] sm:h-[70vh] lg:h-[100vh]"
+      className="relative w-full h-[55vh] sm:h-[70vh] lg:h-[100vh]"
     >
       {/* Navigation Buttons */}
       <button
@@ -58,7 +58,7 @@ export function HeroSection() {
             <img
               src={img}
               alt="Defence Training"
-              className="w-full h-full   lg:object-fill object-contain"
+              className="w-full h-full   object-fill "
             />
           </SwiperSlide>
         ))}
