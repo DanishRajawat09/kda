@@ -16,7 +16,7 @@ export default function App() {
       <Courses />
       <ExcellenceSection />
       <RegistrationSection />
-      <TrainersSection />
+      {/* <TrainersSection /> */}
       <Footer />
     </div>
   );

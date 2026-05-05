@@ -32,7 +32,7 @@ export function TrainersSection() {
         {/* Section Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <GraduationCap className="w-8 h-8 text-green-700" />
+            <GraduationCap className="w-8 h-8 text-sky-700" />
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
               Our Certified Trainers
             </h2>
@@ -59,7 +59,7 @@ export function TrainersSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                 
                 {/* Badge */}
-                <div className="absolute top-4 right-4 bg-green-700 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                <div className="absolute top-4 right-4 bg-sky-700 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
                   <Award className="w-3 h-3" />
                   Certified
                 </div>

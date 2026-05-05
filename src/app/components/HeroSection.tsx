@@ -7,20 +7,22 @@ import "swiper/css/navigation";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
-  "/heroImage1.jpeg",
-  "/heroImage2.jpeg",
-  "/heroImage3.jpeg",
-  "/heroImage4.jpeg",
-  "/heroImage5.jpeg",
-  "/heroImage6.jpeg",
-  "/heroImage7.jpeg",
-  "/heroImage8.jpeg",
+  "/2.jpg.jpeg",
+  "/3.jpg.jpeg",
+  "/4.jpg.jpeg",
+  "/5.jpg.jpeg",
+  "/6.jpg.jpeg",
+  "/7.jpg.jpeg",
+  "/8.jpg.jpeg",
+  "/9.jpg.jpeg",
+  "/10.jpg.jpeg",
+  "/0222.jpg.jpeg",
 ];
 export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-[45vh] sm:h-[70vh] lg:h-[85vh]"
+      className="relative w-full h-[45vh] sm:h-[70vh] lg:h-[100vh]"
     >
       {/* Navigation Buttons */}
       <button
@@ -38,7 +40,7 @@ export function HeroSection() {
       </button>
 
       <Swiper
-        modules={[Navigation , Autoplay]}
+        modules={[Navigation, Autoplay]}
         navigation={{
           nextEl: ".swiper-button-next-custom",
           prevEl: ".swiper-button-prev-custom",
