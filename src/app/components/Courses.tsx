@@ -38,13 +38,13 @@ export function Courses() {
       description:
         "We offer focused preparation for SSC and Police recruitment exams. Students receive clear subject guidance, regular practice tests, and physical training support where required to meet exam standards.",
     },
-    {
-      id: 6,
-      name: "CUET Preparation",
-      image: "/image6.jpeg",
-      description:
-        "Our CUET program helps students prepare in a focused and organized way. With subject-wise guidance and regular assessments, we help students improve their performance step by step.",
-    },
+  {
+  id: 6,
+  name: "11th & 12th Foundation Classes",
+  image: "/image6.jpeg",
+  description:
+    "Our 11th & 12th Foundation Classes help students build strong academic basics along with disciplined preparation for competitive exams through regular tests, expert guidance, and structured study support.",
+}
   ];
 
   return (

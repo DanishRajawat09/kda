@@ -17,7 +17,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-sky-700 to-sky-800 rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 shrink-0 bg-gradient-to-br from-sky-700 to-sky-800 rounded-lg flex items-center justify-center">
               <Shield className="w-7 h-7 text-white" />
             </div>
             <div className="flex flex-col">

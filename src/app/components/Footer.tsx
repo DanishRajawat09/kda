@@ -1,25 +1,34 @@
-import React from 'react';
-import { Shield, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import {
+  Shield,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export function Footer() {
   const academyLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Courses', href: '#courses' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "Courses", href: "#courses" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   const admissionLinks = [
-    { name: 'Student Registration', href: '#registration' },
-    { name: 'Eligibility Criteria', href: '#eligibility' },
-    { name: 'Fee Structure', href: '#fees' },
-    { name: 'FAQs', href: '#faqs' },
+    { name: "Student Registration", href: "#registration" },
+    { name: "Eligibility Criteria", href: "#eligibility" },
+    { name: "Fee Structure", href: "#fees" },
+    { name: "FAQs", href: "#faqs" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
 
   return (
@@ -30,13 +39,17 @@ export function Footer() {
           {/* Column 1 - About */}
           <div className="space-y-4 lg:col-span-1">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-sky-700 to-sky-800 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 shrink-0 bg-gradient-to-br from-sky-700 to-sky-800 rounded-lg flex items-center justify-center">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">Kuchaman Defence Academy</span>
+              <span className="text-xl font-bold">
+                Kuchaman Defence Academy
+              </span>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Leading defence coaching institute in India, dedicated to preparing aspiring candidates for NDA, NAVY, and AIRFORCE with excellence and discipline.
+              Leading defence coaching institute in India, dedicated to
+              preparing aspiring candidates for NDA, NAVY, and AIRFORCE with
+              excellence and discipline.
             </p>
             {/* Social Links */}
             <div className="flex gap-3 pt-2">
@@ -96,11 +109,13 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-slate-300">
                 <MapPin className="w-5 h-5 text-sky-700 flex-shrink-0 mt-0.5" />
-                <span>KDA Campus, Sardarshahar Road, Taranagar (Churu), Rajasthan</span>
+                <span>
+                  KDA Campus, Sardarshahar Road, Taranagar (Churu), Rajasthan
+                </span>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-300">
                 <Phone className="w-5 h-5 text-sky-700 flex-shrink-0" />
-                <a href='tel:+919875272291'>+91 9875272291</a> 
+                <a href="tel:+919875272291">+91 9875272291</a>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-300">
                 <Mail className="w-5 h-5 text-sky-700 flex-shrink-0" />

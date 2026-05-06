@@ -5,6 +5,9 @@ import { HeroSection } from './components/HeroSection';
 import { ExcellenceSection } from './components/ExcellenceSection';
 import { RegistrationSection } from './components/RegistrationSection';
 import { TrainersSection } from './components/TrainersSection';
+import { ContactSection } from './components/ContactSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
+import { FacilitiesSection } from './components/FacilitiesSection';
 import { Footer } from './components/Footer';
 import { Courses } from './components/Courses';
 
@@ -15,8 +18,11 @@ export default function App() {
       <HeroSection />
       <Courses />
       <ExcellenceSection />
+      <FacilitiesSection />
       <RegistrationSection />
       {/* <TrainersSection /> */}
+      <TestimonialsSection />
+      <ContactSection />
       <Footer />
     </div>
   );
