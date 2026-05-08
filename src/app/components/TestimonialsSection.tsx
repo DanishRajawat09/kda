@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Star, MessageCircle } from "lucide-react";
+import {
+  MessageCircle,
+  Play,
+  Pause,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -9,53 +15,89 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export function TestimonialsSection() {
-  const testimonials = [
+  const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
+  const videoRefs = useRef<{ [key: number]: HTMLVideoElement }>({});
+
+  const videos = [
     {
       id: 1,
-      name: "Rahul Singh",
-      role: "NDA Qualified Aspirant",
-      rating: 5,
-      text: "The training at Kuchaman Defence Academy was exceptional. The experienced instructors guided me through every step of my NDA preparation. I got selected in my first attempt!",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlIHBvcnRyYWl0fGVufDB8fHx8fDE3NzA5NzUyNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.50 PM.mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.55 PM.jpeg",
     },
     {
       id: 2,
-      name: "Priya Sharma",
-      role: "AFCAT Successful",
-      rating: 5,
-      text: "I was struggling with time management and strategy. The academy's coaching made everything clear. The mentors are genuinely invested in student success.",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUgcG9ydHJhaXR8ZW58MHx8fHx8MTc3MDk3NTI0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.51 PM.mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.55 PM (1).jpeg",
     },
     {
       id: 3,
-      name: "Vikram Patel",
-      role: "CDS Qualified",
-      rating: 5,
-      text: "The comprehensive study material and regular mock tests helped me identify my weak areas. The faculty support was outstanding throughout my preparation journey.",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlIGZhY2UgcG9ydHJhaXR8ZW58MHx8fHx8MTc3MDk3NTI0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.52 PM.mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.56 PM.jpeg",
     },
     {
       id: 4,
-      name: "Anjali Verma",
-      role: "SSB Interview Cleared",
-      rating: 5,
-      text: "The personality development and confidence-building sessions were invaluable. My SSB interview preparation at KDA was structured and result-oriented.",
-      image:
-        "https://images.unsplash.com/photo-1517070213202-1e1f1db4ebb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fHwxNzcwOTc1MjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.53 PM.mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.56 PM (1).jpeg",
     },
     {
       id: 5,
-      name: "Arjun Kumar",
-      role: "Army Officer (Selected)",
-      rating: 5,
-      text: "Best decision I made for my defence career! The quality of teaching and personalized attention sets KDA apart from other coaching centres. Highly recommended!",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlIHBvcnRyYWl0fGVufDB8fHx8fDE3NzA5NzUyNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.52 PM (1).mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.55 PM.jpeg",
+    },
+    {
+      id: 6,
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.53 PM (1).mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.56 PM.jpeg",
+    },
+    {
+      id: 7,
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.54 PM.mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.55 PM (1).jpeg",
+    },
+    {
+      id: 8,
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.54 PM (1).mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.56 PM (1).jpeg",
+    },
+    {
+      id: 9,
+      videoPath:
+        "/testimonial-video/WhatsApp Video 2026-05-07 at 6.40.57 PM.mp4",
+      thumbnail:
+        "/testimonial-video/WhatsApp Image 2026-05-07 at 6.40.55 PM.jpeg",
     },
   ];
+
+  const handlePlayPause = (videoId: number) => {
+    const video = videoRefs.current[videoId];
+    if (!video) return;
+
+    if (playingVideoId === videoId) {
+      video.pause();
+      setPlayingVideoId(null);
+    } else {
+      // Pause all other videos
+      Object.values(videoRefs.current).forEach((v) => v?.pause());
+      video.play();
+      setPlayingVideoId(videoId);
+    }
+  };
 
   return (
     <section className="py-16 lg:py-24 bg-white">
@@ -79,10 +121,9 @@ export function TestimonialsSection() {
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
+              delay: 5000,
+              disableOnInteraction: true,
             }}
-            loop={true}
             navigation={{
               nextEl: ".swiper-button-next-custom",
               prevEl: ".swiper-button-prev-custom",
@@ -108,42 +149,59 @@ export function TestimonialsSection() {
             }}
             className="pb-16"
           >
-            {testimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
-                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 h-full flex flex-col">
-                  {/* Rating Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
+            {videos.map((video) => (
+              <SwiperSlide key={video.id}>
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  {/* Video Container */}
+                  <div className="relative group">
+                    <video
+                      ref={(el) => {
+                        if (el) videoRefs.current[video.id] = el;
+                      }}
+                      className="w-full h-64 object-cover bg-black"
+                      poster={video.thumbnail}
+                      onEnded={() => setPlayingVideoId(null)}
+                    >
+                      <source src={video.videoPath} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+
+                    {/* Play Button Overlay */}
+                    {playingVideoId !== video.id && (
+                      <button
+                        onClick={() => handlePlayPause(video.id)}
+                        className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-all duration-300"
+                        aria-label="Play video"
+                      >
+                        <div className="bg-sky-700 hover:bg-sky-800 text-white rounded-full p-4 transition-all transform group-hover:scale-110">
+                          <Play className="w-8 h-8 fill-current" />
+                        </div>
+                      </button>
+                    )}
+
+                    {/* Play Controls */}
+                    {playingVideoId === video.id && (
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex items-center justify-between">
+                        <button
+                          onClick={() => handlePlayPause(video.id)}
+                          className="text-white hover:text-sky-400 transition-colors"
+                          aria-label="Pause video"
+                        >
+                          <Pause className="w-6 h-6 fill-current" />
+                        </button>
+                      </div>
+                    )}
                   </div>
 
-                  {/* Testimonial Text */}
-                  <p className="text-slate-700 mb-6 flex-grow line-clamp-4">
-                    "{testimonial.text}"
-                  </p>
-
-                  {/* Divider */}
-                  <div className="border-t border-slate-200 pt-6">
-                    {/* Profile Section */}
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
-                      <div>
-                        <h4 className="font-bold text-slate-900">
-                          {testimonial.name}
-                        </h4>
-                        <p className="text-sm text-green-700 font-semibold">
-                          {testimonial.role}
-                        </p>
-                      </div>
-                    </div>
+                  {/* Video Info */}
+                  <div className="p-6 flex-grow flex flex-col">
+                    <p className="text-slate-600 font-medium mb-3">
+                      Student Testimonial
+                    </p>
+                    <p className="text-sm text-slate-500">
+                      Watch how our students have succeeded in their defence
+                      exam journey
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -151,19 +209,19 @@ export function TestimonialsSection() {
           </Swiper>
 
           {/* Navigation Arrows */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none z-10">
-            {/* <button
-              className="swiper-button-prev-custom pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -ml-4 sm:ml-0"
+          <div className="absolute top-1/3 -translate-y-1/2 w-full flex justify-between pointer-events-none z-10 px-0">
+            <button
+              className="swiper-button-prev-custom absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -translate-y-1/2 left-0 -translate-x-full -ml-4 sm:-ml-6"
               aria-label="Previous testimonial"
             >
-              ←
+              <ChevronLeft size={28} className="text-white" />
             </button>
             <button
-              className="swiper-button-next-custom pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -mr-4 sm:mr-0"
+              className="swiper-button-next-custom absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -translate-y-1/2 right-0 translate-x-full -mr-4 sm:-mr-6"
               aria-label="Next testimonial"
             >
-              →
-            </button> */}
+              <ChevronRight size={28} className="text-white" />
+            </button>
           </div>
 
           {/* Pagination Dots */}

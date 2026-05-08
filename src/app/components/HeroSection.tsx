@@ -7,16 +7,15 @@ import "swiper/css/navigation";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
-  "/2.jpg.jpeg",
-  "/3.jpg.jpeg",
-  "/4.jpg.jpeg",
-  "/5.jpg.jpeg",
-  "/6.jpg.jpeg",
-  "/7.jpg.jpeg",
-  "/8.jpg.jpeg",
-  "/9.jpg.jpeg",
-  "/10.jpg.jpeg",
-  "/0222.jpg.jpeg",
+  "/heroImage1.jpeg",
+  "/heroImage2.jpeg",
+  "/heroImage3.jpeg",
+  "/heroImage4.jpeg",
+  "/heroImage5.jpeg",
+  "/heroImage6.jpeg",
+  "/heroImage7.jpeg",
+  "/heroImage8.jpeg",
+
 ];
 export function HeroSection() {
   return (

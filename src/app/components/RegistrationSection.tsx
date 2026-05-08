@@ -55,7 +55,7 @@ export function RegistrationSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/registrationSec.jpeg"
+                src="/gallery/image44.jpeg"
                 alt="Defence Training Programs"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
