@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Shield, Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
+import React, { useState } from "react";
+import { Shield, Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Courses', href: '#courses' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "Courses", href: "#courses" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   return (
@@ -21,8 +21,12 @@ export function Navbar() {
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-slate-900">Kuchaman Defence Academy (Taranagar)</span>
-              <span className="text-xs text-slate-600 hidden sm:block">Excellence in Defence Training</span>
+              <span className="text-xl font-bold text-slate-900">
+                Kuchaman Defence Academy (Taranagar)
+              </span>
+              <span className="text-xs text-slate-600 hidden sm:block">
+                Excellence in Defence Training
+              </span>
             </div>
           </div>
 
@@ -41,12 +45,10 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-              <a href="#registration" className='mt-4'>
-            <Button className="w-full bg-sky-700 hover:bg-sky-800 text-white py-2 rounded-lg font-semibold ">
-           
-               Student Registration
-           
-            </Button>
+            <a href="#contact" className="mt-4">
+              <Button className="w-full bg-sky-700 hover:bg-sky-800 text-white py-2 rounded-lg font-semibold ">
+                Student Registration
+              </Button>
             </a>
           </div>
 
@@ -55,7 +57,11 @@ export function Navbar() {
             className="lg:hidden p-2 rounded-md text-slate-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -74,12 +80,10 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <a href="#registration">
-            <Button className="w-full bg-sky-700 hover:bg-sky-800 text-white py-2 rounded-lg font-semibold mt-4">
-           
-               Student Registration
-           
-            </Button>
+            <a href="#contact">
+              <Button className="w-full bg-sky-700 hover:bg-sky-800 text-white py-2 rounded-lg font-semibold mt-4">
+                Student Registration
+              </Button>
             </a>
           </div>
         </div>

@@ -37,9 +37,11 @@ export function RegistrationSection() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="#contact" className='w-full'>
               <Button className="bg-sky-700 hover:bg-sky-800 text-white px-8 py-6 rounded-lg font-semibold text-lg shadow-lg">
-                Student Registration
+                Contact Us 
               </Button>
+              </a>
              <a href="#courses" className='w-full'>
                <Button
                 variant="outline"
