@@ -124,13 +124,13 @@ export function GallerySection() {
           {/* Navigation Arrows */}
           <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between pointer-events-none z-10 px-0">
             <button
-              className="gallery-prev absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -translate-y-1/2 left-0 -translate-x-full -ml-4 sm:-ml-6"
+              className="gallery-prev absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 top-1/2 -translate-y-1/2 left-4 sm:left-6 lg:-left-6 hidden lg:flex"
               aria-label="Previous image"
             >
                   <ChevronLeft size={28} className="text-white" />
             </button>
             <button
-              className="gallery-next absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -translate-y-1/2 right-0 translate-x-full -mr-4 sm:-mr-6"
+              className="gallery-next absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 top-1/2 -translate-y-1/2 right-4 sm:right-6 lg:-right-6 hidden lg:flex"
               aria-label="Next image"
             >
                   <ChevronRight size={28} className="text-white" />

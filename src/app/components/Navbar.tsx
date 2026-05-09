@@ -14,11 +14,11 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24 sm:h-20">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 shrink-0 bg-gradient-to-br from-sky-700 to-sky-800 rounded-lg flex items-center justify-center">
-              <Shield className="w-7 h-7 text-white" />
+              <Shield className="w-6 h-6 text-white" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-slate-900">Kuchaman Defence Academy (Taranagar)</span>

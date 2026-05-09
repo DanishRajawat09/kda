@@ -8,10 +8,10 @@ import { TrainersSection } from './components/TrainersSection';
 import { ContactSection } from './components/ContactSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { FacilitiesSection } from './components/FacilitiesSection';
-import { TopAdmissionSection } from './components/TopAdmissionSection';
 import { GallerySection } from './components/GallerySection';
 import { Footer } from './components/Footer';
 import { Courses } from './components/Courses';
+import { TopSelectionSection } from './components/TopSelectionSection';
 
 export default function App() {
   return (
@@ -21,7 +21,7 @@ export default function App() {
       <Courses />
       <ExcellenceSection />
       <FacilitiesSection />
-      <TopAdmissionSection />
+      <TopSelectionSection />
       <RegistrationSection />
       {/* <TrainersSection /> */}
       <TestimonialsSection />

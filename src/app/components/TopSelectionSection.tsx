@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export function TopAdmissionSection() {
+export function TopSelectionSection() {
   const images = [
     "/top addmisions/0222.jpg (1).jpeg",
     "/top addmisions/0222.jpg.jpeg",
@@ -31,7 +31,7 @@ export function TopAdmissionSection() {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Award className="w-8 h-8 text-sky-700" />
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
-              Top Admissions
+              Top Selections
             </h2>
           </div>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -89,13 +89,13 @@ export function TopAdmissionSection() {
           {/* Navigation Arrows */}
           <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between pointer-events-none z-10 px-0">
             <button
-              className="top-admission-prev absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -translate-y-1/2 left-0 -translate-x-full -ml-4 sm:-ml-6"
+              className="top-admission-prev absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 top-1/2 -translate-y-1/2 left-4 sm:left-6 lg:-left-6 hidden lg:flex"
               aria-label="Previous image"
             >
                    <ChevronLeft size={28} className="text-white" />
             </button>
             <button
-              className="top-admission-next absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 -translate-y-1/2 right-0 translate-x-full -mr-4 sm:-mr-6"
+              className="top-admission-next absolute pointer-events-auto bg-sky-700 hover:bg-sky-800 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all shadow-lg hover:shadow-xl active:scale-95 top-1/2 -translate-y-1/2 right-4 sm:right-6 lg:-right-6 hidden lg:flex"
               aria-label="Next image"
             >
               <ChevronRight size={28} className="text-white" />
